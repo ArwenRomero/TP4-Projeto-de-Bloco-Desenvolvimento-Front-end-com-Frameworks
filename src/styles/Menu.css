@@ -1,0 +1,70 @@
+/* Estrutura principal do menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  background: linear-gradient(to right, #45b1f5, #45b1f5);
+  box-shadow: 0 4px 6px rgba(194, 87, 87, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Links padrão */
+.menu .link {
+  text-decoration: none;
+  font-size: 1.5rem;  /* Aumentado o tamanho da fonte */
+  color: #fff;  /* Branco, mas com maior contraste */
+  font-weight: 600;  /* Peso da fonte mais forte */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animação hover nos links */
+.menu .link:hover {
+  color: #fffae5;  /* Cor do texto quando passar o mouse */
+  transform: scale(1.1);
+}
+
+/* Link ativo */
+.menu .active {
+  color: #fffae5;  /* Cor suave para o link ativo */
+  font-weight: 700;  /* Peso mais forte para o link ativo */
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Linha animada embaixo do link ativo */
+.menu .active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background-color: #fffae5;  /* Cor da linha embaixo do link ativo */
+  animation: slide-in 0.4s ease-in-out;
+}
+
+/* Animação do underline */
+@keyframes slide-in {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      gap: 1.5rem;  /* Aumenta o espaçamento vertical */
+      padding: 0.5rem 0;
+  }
+
+  .menu .link {
+      font-size: 1.3rem;  /* Ajuste do tamanho da fonte em telas menores */
+  }
+}

@@ -1,0 +1,140 @@
+.filme-busca {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f7fa;
+}
+
+.busca-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+  position: relative;
+}
+
+.busca-input input {
+  padding: 12px 50px 12px 40px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  width: 320px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.busca-input input:focus {
+  border-color: #45b1f5;
+  outline: none;
+  box-shadow: 0 6px 12px rgba(69, 177, 245, 0.3);
+}
+
+.busca-input .fa-search {
+  position: absolute;
+  left: 15px;
+  color: #45b1f5;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.busca-input input:focus + .fa-search {
+  transform: scale(1.1);
+}
+
+.busca-input button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #45b1f5;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(69, 177, 245, 0.4);
+}
+
+.busca-input button:hover {
+  background-color: #333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sugestoes {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.sugestao-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sugestao-item:hover {
+  background-color: #f0f0f0;
+}
+
+.resultados {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.filme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.filme-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filme-poster {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f4f7fa;
+}
+
+.filme-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.filme-titulo {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.filme-descricao {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.sem-resultados {
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 20px;
+}
